@@ -15,7 +15,7 @@ def add_student():
         
         query = "INSERT INTO students (reg_no, name, department, year) VALUES (%s, %s, %s, %s)"
         cursor.execute(query, (reg_no, name, dept, year))
-        print("✅ Student added successfully!")
+        print(" Student added successfully!")
 
 def view_students():
     cursor.execute("select * from students ORDER by reg_no")
@@ -37,7 +37,7 @@ def search_students():
             print(f"Department: {result[2]}")
             print(f"Year: {result[3]}")
     else:
-            print("❌ Student not found!")
+            print(" Student not found!")
     
 def delete_students():
     reg_no=input("Enter Register No to Delete: ")
@@ -70,5 +70,6 @@ while True:
         break
     else:
         print("Invalid Choice")
+
 
 
